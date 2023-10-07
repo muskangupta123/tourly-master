@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details for Santorini Island's Weekend Vacation</title>
+    <style>
+        body {
+            background-image: url('./mount.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff6600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #ff6600;
+            margin-top: 30px;
+        }
+
+        .price {
+            font-size: 32px;
+            color: #ff6600;
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 16px;
+            color: black;
+            text-align: left;
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: #fff;
+            height: 50px;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #258cd1;
+        }
+    </style>
+</head>
+<body>
+    <section class="booking-details">
+        <div class="container">
+            <h2 class="h2 section-title">Booking Details for Santorini Island's Weekend Vacation</h2>
+            
+            <!-- Display detailed information about the package here -->
+            <p>Package: Santorini Island's Weekend Vacation</p>
+            <p>Duration: 7 Days and 6 Nights</p>
+            <p>Price: $660 per person</p>
+            <p>Places to Visit:</p>
+            <ul>
+                <li>Red Beach</li>
+                <li>White-Washed Villages</li>
+            </ul>
+            
+            <!-- User details and payment form -->
+            <form action="" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="creditCard">Credit Card:</label>
+                <input type="text" id="creditCard" name="creditCard" required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+
+                <button type="submit" class="btn-primary">Complete Booking</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

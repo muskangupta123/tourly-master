@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Tourly</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/images/hero-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between; /* Align logo to the left */
+            align-items: center;
+        }
+
+        nav {
+            text-align: justify;
+        }
+
+        .logo {
+            font-family: 'Your Unique Font', sans-serif; /* Replace 'Your Unique Font' with the actual font you want to use */
+            font-size: 24px; /* Adjust the font size as needed */
+            font-weight: bold;
+            color:white; /* Adjust the color of the logo */
+            margin-left: 50px;
+            margin-right: 20px; /* Add some margin to the right of the logo */
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #3498db;
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .book-now h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .book-now p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .book-now form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .book-now label {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .book-now input,
+        .book-now textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .book-now textarea {
+            resize: vertical;
+        }
+
+        .book-now button {
+            grid-column: span 2;
+            background-color: #ff5733;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now button:hover {
+            background-color: #e44f2f;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <logo class="logo">Tourly</logo> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Destinations</a></li>
+                <li><a href="index.html">Packages</a></li>
+                <li><a href="index.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="book-now">
+            <h1>Book Your Trip</h1>
+            <p>Fill out the form below to book your travel package.</p>
+            <form action="submit_booking.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+                
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+                
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date" required>
+                
+                <label for="adults">Number of Adults:</label>
+                <input type="number" id="adults" name="adults" required>
+                
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" required>
+                
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+                
+                <button type="submit">Submit Booking</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tourly. All rights reserved.</p>
+    </footer>
+</body>
+</html>

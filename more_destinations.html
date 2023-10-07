@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Destinations - Tourly</title>
+    <link rel="stylesheet" href="path/to/your/styles.css">
+    <style>
+      /* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('path/to/your/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    text-align: right;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Tour Search Styles */
+.tour-search {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tour-search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.input-wrapper {
+    margin-bottom: 20px;
+}
+
+.input-label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.btn-secondary {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e44f2f;
+}
+
+/* Popular Destinations Styles */
+.popular {
+    margin-top: 40px;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.popular-list {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-rating ion-icon {
+    color: #f39c12;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.card-subtitle a,
+.card-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.card-subtitle a:hover,
+.card-title a:hover {
+    text-decoration: underline;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1em;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #217dbb;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="tour-search">
+        <div class="container">
+
+            <form action="" class="tour-search-form">
+
+                <div class="input-wrapper">
+                    <label for="destination" class="input-label">Search Destination*</label>
+                    <input type="text" name="destination" id="destination" required placeholder="Enter Destination" class="input-field">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="people" class="input-label">Pax Number*</label>
+                    <input type="number" name="people" id="people" required placeholder="No.of People" class="input-field">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="checkin" class="input-label">Checkin Date**</label>
+                    <input type="date" name="checkin" id="checkin" required class="input-field">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="checkout" class="input-label">Checkout Date*</label>
+                    <input type="date" name="checkout" id="checkout" required class="input-field">
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Inquire now</button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <section class="popular" id="destination">
+        <div class="container">
+
+            <p class="section-subtitle">Uncover place</p>
+            <h2 class="h2 section-title">Popular destination</h2>
+
+            <p class="section-text">
+                Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+                Sit ornare
+                mollitia tenetur, aptent.
+            </p>
+
+            <ul class="popular-list">
+                <li>
+                    <div class="popular-card">
+                        <figure class="card-img">
+                            <img src="./assets/images/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                        </figure>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                            <p class="card-subtitle">
+                                <a href="#">Italy</a>
+                            </p>
+                            <h3 class="h3 card-title">
+                                <a href="#">San miguel</a>
+                            </h3>
+                            <p class="card-text">
+                                Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="popular-card">
+                        <figure class="card-img">
+                            <img src="./assets/images/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                        </figure>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                            <p class="card-subtitle">
+                                <a href="#">Dubai</a>
+                            </p>
+                            <h3 class="h3 card-title">
+                                <a href="#">Burj khalifa</a>
+                            </h3>
+                            <p class="card-text">
+                                Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="popular-card">
+                        <figure class="card-img">
+                            <img src="./assets/images/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
+                        </figure>
+                        <div class="card-content">
+                            <div class="card-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                            <p class="card-subtitle">
+                                <a href="#">Japan</a>
+                            </p>
+                            <h3 class="h3 card-title">
+                                <a href="#">Kyoto temple</a>
+                            </h3>
+                            <p class="card-text">
+                                Fusce hic augue velit wisi ips quibusdam pariatur
